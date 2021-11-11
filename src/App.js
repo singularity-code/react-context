@@ -1,10 +1,14 @@
 import Colorbox from "./components/Colorbox";
+import { ColorProvider } from "./contexts/color";
 
+// value must be provided when use Provider
 function App() {
   return (
-    <div>
-      <Colorbox></Colorbox>
-    </div>
+    <ColorProvider value={{ color: "green" }}>
+      <div>
+        <Colorbox></Colorbox>
+      </div>
+    </ColorProvider>
   );
 }
 
